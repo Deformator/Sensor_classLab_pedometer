@@ -1,24 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="C4O-eL-HWl">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="X3D-N3-wPM">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController id="C4O-eL-HWl" customClass="ViewController" customModule="Sensor_classLab_pedometer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Yj1-CM-PAV"/>
+                        <viewControllerLayoutGuide type="bottom" id="nXR-d3-veZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8EG-ef-I6A">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pedometer Demo " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FkC-pa-nUy">
+                                <rect key="frame" x="16" y="40" width="343" height="27"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xhM-d7-NnX">
+                                <rect key="frame" x="0.0" y="500" width="375" height="167"/>
+                                <color key="backgroundColor" red="0.4549019608" green="0.73333333329999995" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="28"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="startStopButton:" destination="C4O-eL-HWl" eventType="touchUpInside" id="n4w-EC-1EB"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Pgc-3Y-prT">
+                                <rect key="frame" x="26" y="76" width="177" height="36"/>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Steps: None" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xdg-El-uwF">
+                                <rect key="frame" x="70" y="269" width="235" height="48"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.96791154733468354" blue="0.51287966456190759" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="FkC-pa-nUy" firstAttribute="centerX" secondItem="xhM-d7-NnX" secondAttribute="centerX" id="08Q-uw-Ekn"/>
+                            <constraint firstItem="xdg-El-uwF" firstAttribute="top" secondItem="8EG-ef-I6A" secondAttribute="top" constant="156" id="32I-Et-vmW"/>
+                            <constraint firstItem="xhM-d7-NnX" firstAttribute="height" secondItem="8EG-ef-I6A" secondAttribute="height" multiplier="1:4" id="Acq-nF-bv9"/>
+                            <constraint firstItem="nXR-d3-veZ" firstAttribute="top" secondItem="xhM-d7-NnX" secondAttribute="bottom" id="B8h-Ji-O3K"/>
+                            <constraint firstItem="xhM-d7-NnX" firstAttribute="leading" secondItem="8EG-ef-I6A" secondAttribute="leading" id="EnS-zL-cki"/>
+                            <constraint firstItem="xdg-El-uwF" firstAttribute="leading" secondItem="eKU-ZN-cVI" secondAttribute="leading" constant="53" id="SvT-s3-hmS"/>
+                            <constraint firstItem="eKU-ZN-cVI" firstAttribute="trailing" secondItem="Pgc-3Y-prT" secondAttribute="trailing" constant="172" id="TTA-WY-B07"/>
+                            <constraint firstItem="xdg-El-uwF" firstAttribute="top" secondItem="Pgc-3Y-prT" secondAttribute="bottom" constant="44" id="bJ4-Qg-DL8"/>
+                            <constraint firstItem="FkC-pa-nUy" firstAttribute="top" secondItem="Yj1-CM-PAV" secondAttribute="bottom" constant="20" id="eK9-ya-ZLz"/>
+                            <constraint firstAttribute="trailing" secondItem="xhM-d7-NnX" secondAttribute="trailing" id="now-LJ-jm8"/>
+                            <constraint firstItem="Pgc-3Y-prT" firstAttribute="leading" secondItem="eKU-ZN-cVI" secondAttribute="leading" constant="26" id="p5o-cF-xY9"/>
+                            <constraint firstItem="Pgc-3Y-prT" firstAttribute="top" secondItem="FkC-pa-nUy" secondAttribute="bottom" constant="9" id="phE-0g-hrd"/>
+                            <constraint firstItem="FkC-pa-nUy" firstAttribute="leading" secondItem="8EG-ef-I6A" secondAttribute="leadingMargin" id="vk4-Sp-r81"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="eKU-ZN-cVI"/>
                     </view>
+                    <connections>
+                        <outlet property="statusTitle" destination="FkC-pa-nUy" id="Www-X2-mWc"/>
+                        <outlet property="stepsLabel" destination="xdg-El-uwF" id="xZo-HV-6tJ"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nab-1C-fW6" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
         </scene>
     </scenes>
 </document>

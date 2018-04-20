@@ -281,7 +281,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2BULHRS882;
+				DEVELOPMENT_TEAM = 58ZT3SCKSB;
 				INFOPLIST_FILE = Sensor_classLab_pedometer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -299,7 +299,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2BULHRS882;
+				DEVELOPMENT_TEAM = 58ZT3SCKSB;
 				INFOPLIST_FILE = Sensor_classLab_pedometer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
